@@ -10,7 +10,7 @@ nombre_archivo = 'mi_archivo.txt'
 
 with open(nombre_archivo, 'w') as archivo:
     archivo.write('Hola\n')
-    archivo.write('Como estas?')
+    archivo.write('Como estas?\n')
 
 # Modo exclusivo. No sobreescribir un archivo
 
