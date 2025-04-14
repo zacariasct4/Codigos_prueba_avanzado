@@ -1,5 +1,6 @@
 import os.path
-from proyecto_maquina_snacks.snacks import Snack 
+from snacks import Snack 
+
 class Servicio_snacks:
 
     Nombre_archivo = 'snacks.txt'
@@ -38,16 +39,16 @@ class Servicio_snacks:
                     _, nombre, precio = linea.strip().split(',')
                     snack = Snack(nombre , float(precio))
                     snacks.append(snack)
-
         except Exception as e:
             print(f'Error al leer el archivod de snacks: {e}')
+        return snacks
 
     def agregar_snack(self, snack):
         self.snacks.append(snack)
         self.guardar_snacks_archivo([snack])
 
     def mostrar_snacks(self):
-        print('--- Snacks enn inventario ---')
+        print('--- Snacks en inventario ---')
         for snack in self.snacks:
             print(snack)
 

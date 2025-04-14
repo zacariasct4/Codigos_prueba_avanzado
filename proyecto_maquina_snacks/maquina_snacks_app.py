@@ -1,5 +1,6 @@
-from proyecto_maquina_snacks.servicio_snacks import Servicio_snacks 
-from servicio_snacks import Snack 
+from servicio_snacks import Servicio_snacks 
+from snacks import Snack 
+
 class Maquina_Snacks:
 
     def __init__(self):
@@ -25,11 +26,11 @@ class Maquina_Snacks:
               3. Agregar nuevo snack al inventario
               4. Inventario snacks
               5. Salir''')
-        return int(input('Elige una opcion'))
+        return int(input('Elige una opcion: '))
     
     def ejecutar_opcion(self, opcion):
         if opcion == 1:
-            self.comprar_snack()
+            self.comprar_snacks()
         elif opcion == 2:
             self.mostrar_ticket()
         elif opcion == 3:
@@ -44,7 +45,7 @@ class Maquina_Snacks:
         return False
     
     def comprar_snacks(self):
-        id_snack = int(input('Que snack quieres comprar (id) ?'))
+        id_snack = int(input('Que snack quieres comprar (id) ?: '))
         snacks = self.servicio_snacks.get_snacks()
         snack = next((snack for snack in snacks if snack.id_snack == id_snack), None)
         if snack:
@@ -64,8 +65,8 @@ class Maquina_Snacks:
         print(f'\tTotal -> ${total:.2f}')
 
     def agregar_snack(self):
-        nombre = input('Nombre del snack')
-        precio = float(input('Precio del snack'))
+        nombre = input('Nombre del snack: ')
+        precio = float(input('Precio del snack: '))
         nuevo_snack = Snack(nombre, precio)
         self.servicio_snacks.agregar_snack(nuevo_snack)
         print('Snack agrefado correctamente')
