@@ -40,7 +40,7 @@ class Servicio_snacks:
                     snack = Snack(nombre , float(precio))
                     snacks.append(snack)
         except Exception as e:
-            print(f'Error al leer el archivod de snacks: {e}')
+            print(f'Error al leer el archivo de snacks: {e}')
         return snacks
 
     def agregar_snack(self, snack):

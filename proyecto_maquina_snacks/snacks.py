@@ -1,6 +1,7 @@
 
 class Snack:
-    contador_snack = 0
+    contador_snack = 0 # variable de clase para que lo tengan todas las variables creadas a partir de la clase
+
     def __init__(self, nombre= '', precio = 0.0):
         Snack.contador_snack += 1
         self.id_snack = Snack.contador_snack
