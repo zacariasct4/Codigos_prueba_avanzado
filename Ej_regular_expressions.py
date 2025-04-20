@@ -29,8 +29,8 @@ print(f'La coma se encuentra en el puesto {result4.end()}')
 # \d{'número de dígitos'} búsqueda de dígitos
 # \s para saltos de línea
 # \w caracteres alfanuméricos
-# \^ para indicar con qué tiene que empezar: \^w (debe empezar con caracter alfanumérico)
+# \^ para indicar con qué tiene que empezar: \^w{4,6} (debe empezar con caracter alfanumérico de 4 a 6 caracteres)
 # \$ para indicar con qué debe terminar: \.$ (debe acabar con punto)
 # \b coincide con el principio o final de una palabra: \bc.sa\b
 # | coincidir con una u otra opción: r'palta|aguacate|\b\w{7}\b|p..a'
-
+# + una vez o más veces: \a+  ('aaa aa bb a cc') serían 3 veces
